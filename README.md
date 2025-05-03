@@ -1,72 +1,53 @@
-# ByteDefender – Malware Detection System for Windows PE Files
+Our Website is made for detecting any malicious behaviour in a PE file. If the uploaded PE file is malicious then it generates a warning message along with the log as a report for the same else if the file is safe it generates the alert and the log
 
-ByteDefender is a machine learning-powered malware detection tool designed specifically for Portable Executable (PE) files on Windows. It analyzes static features and classifies files as malicious or benign using trained models.
+---
 
-## 🔍 Overview
+## ⚙️ Prerequisites
 
-- **Type**: Classification  
-- **Approach**: Static analysis  
-- **Tech Stack**: Python, Scikit-learn, Django, MySQL  
-- **ML Models Used**: Random Forest, Support Vector Machine (SVM)  
-- **Accuracy**: ~90%
+1. Make sure Python (version 3.12.2) is installed on your system  
+2. Install Django (version 5.0.2):  
+   `pip install django`  
+3. Install joblib:  
+   `pip install joblib`  
+4. Install scikit-learn:  
+   `pip install scikit-learn`  
+5. Install PEFILE library:  
+   `pip install pefile`  
+6. Install NumPy:  
+   `pip install numpy`  
 
-## 🚀 Features
+---
 
-- Upload PE files via a web interface (Django)
-- Extracts key features like section headers, entropy, size
-- Classifies using ML model trained on labeled dataset
-- Displays prediction results on the UI
+## 🚀 Steps to Access the Project
 
-## 🧠 Machine Learning
+1. Navigate to the `bytedefender` project folder:  
+   `cd bytedefender`  
+2. Run the Django server:  
+   `python manage.py runserver`  
+3. Click on the URL shown in the terminal to access the website in your browser.
 
-- **Feature Extraction**: Static analysis from PE header fields
-- **Preprocessing**: Normalization and encoding of features
-- **Model Training**: Used scikit-learn to train and evaluate models
-- **Evaluation Metrics**: Accuracy, Precision, Recall, F1-score
+---
 
-## 🖥️ Tools & Libraries
+## 🖥️ Website Description
 
-- Python, Pandas, NumPy, Scikit-learn  
-- Django (for web interface)  
-- MySQL (for data storage)  
+1. **HOME PAGE:**  
+   Landing page for navigation across the website.
 
-## 📁 Project Structure
+2. **SCAN PAGE:**  
+   Requires user login/signup. Users can upload PE files to scan. The backend processes the file and redirects to a log page with the prediction and a report.
 
-```plaintext
-ByteDefender/
-├── frontend/           # Django templates and static files (HTML, CSS, JS)
-├── backend/            # Django views, URLs, and logic
-├── ml_model/           # Jupyter notebooks and model training scripts
-├── trained_model.pkl   # Saved ML model file
-├── media/              # Uploaded PE files (runtime)
-├── db/                 # MySQL schema or SQLite DB file
-├── manage.py           # Django entry point
-└── README.md
-```
+3. **HELP PAGE:**  
+   Contains usage guidelines and frequently asked questions.
 
+4. **ABOUT PAGE:**  
+   Explains the purpose and details of the website.
 
-## 📷 Demo
+5. **CONTACT PAGE:**  
+   Allows users to submit queries using a contact form.
 
-Add screenshots or a demo GIF here showing:
-- File upload page
-- Prediction result page
+6. **LOGIN PAGE / SIGNUP PAGE:**  
+   New users must sign up and verify via email before scanning. Registered users can log in directly and access the scan functionality.
 
-## ⚙️ How to Run Locally
+---
 
-1. Clone the repository  
-2. Set up Python environment and install dependencies  
-3. Run migrations and start Django server  
-4. Navigate to `http://localhost:8000`  
-
-## 📌 Future Improvements
-
-- Integrate dynamic analysis techniques  
-- Expand dataset to improve accuracy  
-- Add file hash scanning with VirusTotal API
-
-## 👩‍💻 Author
-
-**Shivani Sharma**  
-[LinkedIn](https://www.linkedin.com/in/shivanisharma2609) • [GitHub](https://github.com/shivani-00)
-
-
+ 
